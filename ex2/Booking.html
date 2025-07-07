@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking | Auto Mechanic Shop</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    header, footer {
+      background-color: lightgray;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    form {
+      padding: 20px;
+    }
+    label, input, select {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AutoBOB Mechanic Shop</h1>
+</header>
+
+<nav>
+  <a href="Home.html">Home</a> |
+  <a href="Services.html">Services</a> |
+  <a href="Booking.html">Booking</a> |
+</nav>
+
+<main>
+  <form>
+    <h3>Booking Services</h3>
+
+    <label>First Name:</label>
+    <input type="text" name="firstname">
+
+    <label>Last Name:</label>
+    <input type="text" name="lastname">
+
+    <label>Car Model:</label>
+    <input type="text" name="carmodel">
+
+    <label>Car Number:</label>
+    <input type="text" name="carnumber">
+
+    <label>Fuel Type:</label>
+    <input type="radio" name="fuel" value="Petrol"> Petrol
+    <input type="radio" name="fuel" value="Diesel"> Diesel
+    <input type="radio" name="fuel" value="LPG"> LPG
+    <input type="radio" name="fuel" value="Other"> Other
+
+    <label>Email:</label>
+    <input type="email" name="email">
+
+    <label>Phone Number:</label>
+    <input type="tel" name="phone" placeholder="+91XXXXXXXXXX">
+
+    <label>Select Service:</label>
+    <select>
+      <option>Oil/Oil Filter Change</option>
+      <option>Wiper Blade Replacement</option>
+      <option>Replace Air Filter</option>
+      <option>New Tires</option>
+      <option>Battery Replacement</option>
+      <option>Wheels Aligned/Balanced</option>
+    </select>
+
+    <br>
+    <button type="submit">Fix Appointment!</button>
+  </form>
+</main>
+
+<footer>
+  &copy; 2022 AUTO MECHANIC SHOP. All Rights Reserved
+</footer>
+
+</body>
+</html>
