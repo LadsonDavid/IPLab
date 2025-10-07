@@ -1,0 +1,20 @@
+{
+  "name": "nodemysql",
+  "version": "1.0.0",
+  "description": "Node.js CRUD application for MySQL database management",
+  "main": "conn.js",
+  "scripts": {
+    "start": "node conn.js",
+    "dev": "nodemon conn.js"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["nodejs", "mysql", "crud", "express"],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Eligibility Validator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fce4ec, #e0f7fa);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2e3c8d;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus {
+      border-color: #2e3c8d;
+      outline: none;
+    }
+
+    .btn {
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fb8c00;
+    }
+
+    .msg {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #2e7d32;
+    }
+
+    .msg.invalid {
+      color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>👤 Age Validator</h2>
+    <input type="text" placeholder="Enter Male Age" id="male" />
+    <input type="text" placeholder="Enter Female Age" id="female" />
+    <button class="btn" onclick="check()">Validate</button>
+    <div id="message" class="msg"></div>
+  </div>
+
+  <script>
+    function check() {
+      const male = parseInt(document.getElementById("male").value);
+      const female = parseInt(document.getElementById("female").value);
+      const msg = document.getElementById("message");
+
+      if (isNaN(male) || isNaN(female)) {
+        msg.innerHTML = "⚠️ Please enter valid numeric ages for both!";
+        msg.className = "msg invalid";
+        return;
+      }
+
+      const isMaleValid = male >= 21;
+      const isFemaleValid = female >= 18;
+
+      if (isMaleValid && isFemaleValid) {
+        msg.innerHTML = "You both have the Valid Age to Marry";
+      } 
+      else {
+        msg.innerHTML = "You don't have the valid age.";
+        msg.className = "msg invalid";
+      }
+    }
+  </script>
+</body>
+</html>

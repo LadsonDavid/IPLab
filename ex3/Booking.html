@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>WayFar Travel Booking</title>
+</head>
+<body>
+  <header>
+    <h1>WAYFAR TRAVEL</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Places.html">Famous Places</a></li>
+      <li><a class="active" href="Booking.html">Ticket Booking</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h2>Book Your Trip</h2>
+    <form>
+      <label>Full Name:</label>
+      <input type="text" name="fullname">
+
+      <label>Email:</label>
+      <input type="email" name="email">
+
+      <label>Destination:</label>
+      <input type="text" name="destination">
+
+      <label>Travel Date:</label>
+      <input type="date" name="date">
+
+      <label>Number of Tickets:</label>
+      <input type="number" name="tickets" min="1" max="10">
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+  <footer class="scroll">
+    <h5>&copy; 2022. All Rights Reserved.</h5>
+  </footer>
+</body>
+</html>

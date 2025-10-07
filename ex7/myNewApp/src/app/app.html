@@ -1,0 +1,193 @@
+<div class="container">
+  <!-- Header Section -->
+  <header class="text-center">
+    <h1>🚀 {{title}} - Angular Demo</h1>
+    <p>Comprehensive Angular Features Showcase</p>
+  </header>
+
+  <!-- Navigation Section -->
+  <section class="navigation-section">
+    <h2>🧭 Navigation</h2>
+    <nav class="nav">
+      <a class="nav-link" [routerLink]="['/hello']" routerLinkActive="active">
+        👋 Hello Component
+      </a>
+      <a class="nav-link" [routerLink]="['/header']" routerLinkActive="active">
+        📋 Header Component
+      </a>
+    </nav>
+  </section>
+
+  <!-- Templates Section -->
+  <section class="templates-section">
+    <h2>📝 Templates & Interpolation</h2>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Basic Interpolation</h3>
+        <p>Hello world! 👋</p>
+        <p><strong>Math:</strong> 1 + 2 = {{ 1+2 }}</p>
+        <p><strong>Conditional:</strong> 10 is {{ 10%2==0?'Even':'Odd' }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Handling Section -->
+  <section class="events-section">
+    <h2>⚡ Event Handling</h2>
+    <div class="demo-card">
+      <p><strong>Welcome to:</strong> {{title|uppercase}} 🎉</p>
+      <p (click)="changeName()" class="clickable">
+        🖱️ Click me to change the title!
+      </p>
+      <div class="click-counter">
+        📊 {{ getClickMessage() }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Structural Directives Section -->
+  <section class="directives-section">
+    <h2>🔧 Structural Directives</h2>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>*ngIf Directive</h3>
+        <div *ngIf="run" class="status-indicator">
+          ✅ My App is running
+        </div>
+        <div *ngIf="!run" class="status-indicator">
+          ⏸️ App is paused
+        </div>
+        <p (click)="toggleRun()" class="clickable">
+          🔄 Toggle App Status
+        </p>
+      </div>
+      
+      <div class="demo-card">
+        <h3>*ngFor Directive</h3>
+        <div class="user-list">
+          <div *ngFor="let u of user" class="user-item">
+            <span class="user-name">{{u.name}}</span>
+            <span class="user-age">Age: {{u.age}}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="demo-card">
+        <h3>*ngSwitch Directive</h3>
+        <div class="gender-list">
+          <div *ngFor="let u of user">
+            <div [ngSwitch]="u.gender">
+              <div *ngSwitchCase="'m'" id="male">
+                👨 {{u.name}}
+              </div>
+              <div *ngSwitchCase="'f'" id="female">
+                👩 {{u.name}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attribute Directives Section -->
+  <section class="attribute-directives-section">
+    <h2>🎨 Attribute Directives</h2>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Style Binding</h3>
+        <div [style.background-color]="colorName" [style.color]="color" [style.border]="borderStyle" class="style-demo">
+          🎨 Uses fixed yellow background
+        </div>
+      </div>
+      
+      <div class="demo-card">
+        <h3>ngStyle Directive</h3>
+        <p [ngStyle]="{
+          color: colorName,
+          borderBottom: borderStyle
+        }" class="ngstyle-demo">
+          🎭 Demo for attribute directive ngStyle
+        </p>
+      </div>
+      
+      <div class="demo-card">
+        <h3>Class Binding</h3>
+        <div [class.bordered]="isBordered" class="class-demo">
+          🔲 Border {{ isBordered ? "ON" : "OFF" }}
+        </div>
+        <p (click)="toggleBorder()" class="clickable">
+          🔄 Toggle Border
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-way Data Binding Section -->
+  <section class="data-binding-section">
+    <h2>🔄 Two-way Data Binding</h2>
+    <div class="demo-card">
+      <h3>ngModel Demo</h3>
+      <input type="text" [(ngModel)]="name" placeholder="Enter your name...">
+      <div class="greeting">
+        👋 Hello, <strong>{{ name }}</strong>!
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipes Section -->
+  <section class="pipes-section">
+    <h2>🔧 Pipes</h2>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Text Pipes</h3>
+        <div class="pipe-demo">
+          <p><strong>Original:</strong> {{name}}</p>
+          <p><strong>Uppercase:</strong> {{name|uppercase}}</p>
+          <p><strong>Lowercase:</strong> {{name|lowercase}}</p>
+          <p><strong>Titlecase:</strong> {{name|titlecase}}</p>
+        </div>
+      </div>
+      
+      <div class="demo-card">
+        <h3>Date Pipes</h3>
+        <div class="pipe-demo">
+          <p><strong>Default:</strong> {{day|date}}</p>
+          <p><strong>Custom:</strong> {{day|date:'dd-MMM-yy'}}</p>
+    </div>
+      </div>
+      
+      <div class="demo-card">
+        <h3>Number Pipes</h3>
+        <div class="pipe-demo">
+          <p><strong>Default:</strong> {{num|number}}</p>
+          <p><strong>Formatted:</strong> {{num|number:'5.2-4'}}</p>
+          <p><strong>Percent:</strong> {{n|percent}}</p>
+          <p><strong>Currency:</strong> {{n|currency}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Component Demo Section -->
+  <section class="components-section">
+    <h2>🧩 Components</h2>
+    <div class="demo-card">
+      <h3>Hello Component</h3>
+      <app-hello></app-hello>
+  </div>
+  </section>
+
+  <!-- Router Outlet Section -->
+  <section class="router-section">
+    <h2>🛣️ Router Outlet</h2>
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

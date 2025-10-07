@@ -1,0 +1,55 @@
+bookstore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: #f0f4f8;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+book {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+book:hover {
+  transform: translateY(-5px);
+}
+
+title {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a237e;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+author, genre, price {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  margin: 3px 0;
+}
+
+price {
+  font-weight: bold;
+  color: #e53935;
+}
+
+description {
+  display: block;
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+  text-align: justify;
+}

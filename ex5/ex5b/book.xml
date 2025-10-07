@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE bookstore [
+  <!ELEMENT bookstore (book*)>
+  <!ELEMENT book (title, author, genre, price, description)>
+  <!ATTLIST book id CDATA #REQUIRED>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT author (#PCDATA)>
+  <!ELEMENT genre (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+]>
+<bookstore>
+  <book id="B1">
+    <title>The Alchemist</title>
+    <author>Paulo Coelho</author>
+    <genre>Fiction</genre>
+    <price>₹299</price>
+    <description>A journey of a shepherd boy in search of treasure, filled with wisdom and purpose.</description>
+  </book>
+
+  <book id="B2">
+    <title>Atomic Habits</title>
+    <author>James Clear</author>
+    <genre>Self-Help</genre>
+    <price>₹499</price>
+    <description>A practical guide to building better habits and breaking bad ones using behavioral psychology.</description>
+  </book>
+
+  <book id="B3">
+    <title>Wings of Fire</title>
+    <author>Dr. A.P.J. Abdul Kalam</author>
+    <genre>Autobiography</genre>
+    <price>₹350</price>
+    <description>The inspiring life story of India’s former President and Missile Man.</description>
+  </book>
+</bookstore>

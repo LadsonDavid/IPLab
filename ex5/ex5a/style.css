@@ -1,0 +1,50 @@
+STORE {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(to bottom right, #e3f2fd, #fff);
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+laptop {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+laptop:hover {
+  transform: scale(1.05);
+}
+
+brand {
+  display: block;
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #1a237e;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+processor,
+ram,
+storage,
+graphics,
+price {
+  display: block;
+  text-align: center;
+  font-size: 0.95em;
+  margin: 6px 0;
+  color: #333;
+}
+
+price {
+  font-weight: bold;
+  color: #c62828;
+  font-size: 1.1em;
+  margin-top: 10px;
+}

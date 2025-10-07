@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE STORE [
+  <!ELEMENT STORE (laptop*)>
+  <!ELEMENT laptop (brand, processor, ram, storage, graphics, price)>
+  <!ATTLIST laptop id CDATA #REQUIRED>
+  <!ELEMENT brand (#PCDATA)>
+  <!ELEMENT processor (#PCDATA)>
+  <!ELEMENT ram (#PCDATA)>
+  <!ELEMENT storage (#PCDATA)>
+  <!ELEMENT graphics (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+]>
+<STORE>
+  <laptop id="L1">
+    <brand>Lenovo Legion 5</brand>
+    <processor>Intel i7 13th Gen</processor>
+    <ram>16GB DDR5</ram>
+    <storage>1TB SSD</storage>
+    <graphics>NVIDIA RTX 4060</graphics>
+    <price>₹1,29,999</price>
+  </laptop>
+
+  <laptop id="L2">
+    <brand>HP Pavilion</brand>
+    <processor>AMD Ryzen 7</processor>
+    <ram>16GB DDR4</ram>
+    <storage>512GB SSD</storage>
+    <graphics>Integrated Radeon</graphics>
+    <price>₹72,999</price>
+  </laptop>
+
+  <laptop id="L3">
+    <brand>Apple MacBook Air</brand>
+    <processor>Apple M2 Chip</processor>
+    <ram>8GB Unified</ram>
+    <storage>256GB SSD</storage>
+    <graphics>Apple GPU</graphics>
+    <price>₹1,14,900</price>
+  </laptop>
+</STORE>

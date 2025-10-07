@@ -1,0 +1,40 @@
+/* Footer Component Styles */
+.footer-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.footer-content p:first-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-content p:last-child {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 15px;
+}
+
+/* Animation for footer */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-content {
+  animation: slideInUp 0.6s ease-out;
+}
